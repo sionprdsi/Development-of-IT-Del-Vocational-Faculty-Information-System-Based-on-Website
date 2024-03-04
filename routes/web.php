@@ -22,7 +22,10 @@ Route::get('/tentang', function () {
     return view('tentang');
 });
 
-// tentang
+Route::get('/programstudi', function () {
+    return view('programstudi');
+});
+
 Route::get('/programstudiD3TK', function () {
     return view('programstudiD3TK');
 });

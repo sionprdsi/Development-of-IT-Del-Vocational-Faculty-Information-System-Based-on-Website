@@ -242,7 +242,7 @@
                             </div>
                             <div class="details position-relative">
                                 <div class="icon">
-                                    <i class="bi bi-laptop-code"></i>
+                                    <i class=""></i>
                                 </div>
                                 <a href="/programstudiD4TRPL" class="stretched-link">
                                     <h3>D4 (Sarjana Terapan) Teknologi Rekayasa Perangkat Lunak</h3>
@@ -264,7 +264,7 @@
                             </div>
                             <div class="details position-relative">
                                 <div class="icon">
-                                    <i class="bi bi-laptop"></i>
+                                    <i class=""></i>
                                 </div>
                                 <a href="/programstudiD3TI" class="stretched-link">
                                     <h3>D3 Teknologi Informasi</h3>
@@ -287,7 +287,7 @@
                             </div>
                             <div class="details position-relative">
                                 <div class="icon">
-                                    <i class="bi bi-server"></i>
+                                    <i class=""></i>
                                 </div>
                                 <a href="/programstudiD3TK" class="stretched-link">
                                     <h3>D3 Teknologi Komputer</h3>
@@ -424,8 +424,6 @@
                                         Indonesia</a></p>
 
                             </div>
-
-
                         </div>
                     </div>
 

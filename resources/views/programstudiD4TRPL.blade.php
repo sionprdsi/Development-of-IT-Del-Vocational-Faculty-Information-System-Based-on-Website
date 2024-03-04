@@ -1017,6 +1017,7 @@
                                         <li><strong>Dr. Arnaldo Marulitua Sinaga, ST., M.InfoTech.</strong></li>
                                         <li><strong>Riyanthi Angrainy Sianturi, S.Sos, M.Ds (Alumni Del, program
                                                 vokasi)</strong></li>
+                                        <li><strong>Oppir Hutapea, S.Tr.Kom, M.Kom</strong></li>
                                         <li><strong>Roy Deddy Hasiholan Lumban Tobing, S.T., M.ICT (Alumni Del, program
                                                 vokasi)</strong></li>
                                         <li><strong>Verawaty Situmorang, S.Kom., M.T.I (Alumni Del, program
