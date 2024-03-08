@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -201,13 +203,18 @@
                                 Vokasi</h3>
                         </div>
 
-                        <p class="mt-2">Pendidikan vokasi merupakan jenjang pendidikan pertama di Institut
+                        <p class="mt-2">Jenderal TNI (Purn.) Luhut B. Pandjaitan mendirikan Yayasan Del pada
+                            tanggal 30 Agustus 2001. Tekad yang kuat untuk berpartisipasi
+                            pada program pemerintahan dalam bidang pendidikan, sosial, kemanusiaan, seni dan budaya, dan
+                            kelestarian lingkungan.
+                            <br>
+                            Pendidikan vokasi merupakan jenjang pendidikan pertama di Institut
                             Teknologi Del sejak berdiri pada tahun 2001 (dahulu bernama Politeknik Informatika Del).
                             Vokasi merupakan pendidikan tinggi dengan fokus pada praktik kerja yang dapat menunjang
                             keahlian di bidang studi tertentu. Program vokasi bertujuan mempersiapkan lulusannya
                             menjadi tenaga yang siap kerja dan mampu bersaing secara global di Dunia Usaha dan Dunia
                             Industri (DUDI).
-                            <br><br>
+                            <br>
                             Fakultas Vokasi Institut Teknologi Del Di Institut Teknologi Del memiliki 3 program
                             studi pada jenjang Diploma 3 (D3) dan Diploma 4 (D4):
                         <ol>
@@ -242,7 +249,7 @@
                             </div>
                             <div class="details position-relative">
                                 <div class="icon">
-                                    <i class=""></i>
+                                    <i class="fas fa-university"></i>
                                 </div>
                                 <a href="/programstudiD4TRPL" class="stretched-link">
                                     <h3>D4 (Sarjana Terapan) Teknologi Rekayasa Perangkat Lunak</h3>
@@ -259,12 +266,12 @@
                     <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
                         <div class="service-item">
                             <div class="img">
-                                <img src="{{ asset('assets/img/halaman tentang/foto prodi 2.jpg') }}"
+                                <img src="{{ asset('assets/img/halaman tentang/foto prodi 3.jpg') }}"
                                     class="img-fluid" alt="">
                             </div>
                             <div class="details position-relative">
                                 <div class="icon">
-                                    <i class=""></i>
+                                    <i class="fas fa-university"></i>
                                 </div>
                                 <a href="/programstudiD3TI" class="stretched-link">
                                     <h3>D3 Teknologi Informasi</h3>
@@ -282,12 +289,12 @@
                     <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
                         <div class="service-item">
                             <div class="img">
-                                <img src="{{ asset('assets/img/halaman tentang/foto prodi 3.jpg') }}"
+                                <img src="{{ asset('assets/img/halaman tentang/foto prodi 2.jpg') }}"
                                     class="img-fluid" alt="">
                             </div>
                             <div class="details position-relative">
                                 <div class="icon">
-                                    <i class=""></i>
+                                    <i class="fas fa-university"></i>
                                 </div>
                                 <a href="/programstudiD3TK" class="stretched-link">
                                     <h3>D3 Teknologi Komputer</h3>
@@ -303,6 +310,7 @@
 
                 </div>
 
+
             </div>
         </section><!-- End Services Section -->
 
@@ -314,7 +322,7 @@
                     <div class="col-lg-6 about-right-faq align-self mb-lg-0 mb-sm-4 mb-4 pr-lg-4">
                         <div class="header-title mb-md-4 mb-4">
                             <span class="sub-title">Visi dan Misi Fakultas Vokasi</span>
-                            <h3 class="hny-title text-left" style="margin-bottom: 1%; margin-top: 1%">Visi Vokasi</h3>
+                            <h3 class="hny-title text-left" style="margin-bottom: 1%; margin-top: 1%">Visi</h3>
                             <div class="grids_info" style="margin-bottom: 3%">
                                 <p>Menjadi lembaga pendidikan vokasi yang unggul dan berperan dalam pengembangan dan
                                     pemanfaatan teknologi yang mengintegrasikan dunia pendidikan dengan kebutuhan dunia
@@ -322,7 +330,7 @@
                                     bersaing secara global.</p>
                             </div>
                             <div class="header-title mb-md-4 mb-4">
-                                <h3 class="hny-title text-left" style="margin-bottom: 1%; margin-top: 1%">Misi Vokasi
+                                <h3 class="hny-title text-left" style="margin-bottom: 1%; margin-top: 1%">Misi
                                 </h3>
                                 <div class="grids_info">
                                     <p>Menyelenggarakan proses pendidikan vokasi yang unggul, berkesinambungan, dan
@@ -436,11 +444,11 @@
 
                             <div class="footer_menu">
                                 <ul>
-                                    <li><a href="#">Tentang Del</a></li>
-                                    <li><a href="#">Pendaftaran Mahasiswa Baru</a></li>
-                                    <li><a href="#">Informasi Beasiswa</a></li>
-                                    <li><a href="#">Unduhan</a></li>
-                                    <li><a href="#">Karir</a></li>
+                                    <li><a href="/tentang">Tentang Del</a></li>
+                                    <li><a href="https://spmb.del.ac.id/">Pendaftaran Mahasiswa Baru</a></li>
+                                    <li><a href="https://www.del.ac.id/?page_id=14564">Informasi Beasiswa</a></li>
+                                    {{-- <li><a href="#">Unduhan</a></li> --}}
+                                    <li><a href="https://www.del.ac.id/?page_id=7511">Karir</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -474,16 +482,14 @@
                                     <a href="https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fwww.del.ac.id%2F&ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Efollow%7Ctwgr%5Einstitut_del&region=follow_link&screen_name=institut_del"
                                         data-toggle="tooltip" data-placement="top" title
                                         data-original-title="Twitter"><i class="fa fa-twitter text-info"></i></a>
-                                    <a href="https://www.youtube.com/channel/UCyzrsLKGZPQFGHIDfN53koQ"
+                                    <a href="https://www.youtube.com/@institutteknologidel1337"
                                         data-toggle="tooltip" data-placement="top" title
                                         data-original-title="YouTube"><i class="fa fa-youtube text-danger"></i></a>
-                                    <a href="https://www.instagram.com/it.del?igsh=MTlnNnQybnM2NHVubA=="
+                                    <a href="https://www.instagram.com/vokasi.itdel?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                                         data-toggle="tooltip" data-placement="top" title
                                         data-original-title="Instagram"><i
                                             class="fa fa-instagram text-purple"></i></a>
                                 </div>
-
-
                             </div>
                         </div>
                     </div>

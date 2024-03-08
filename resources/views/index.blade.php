@@ -36,6 +36,8 @@
     <!-- Template Main CSS File -->
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 
+    <!-- ============== 2 ========================================================================================================================================================= -->
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,11 +64,11 @@
     <!--//google-fonts-->
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{ asset('assets/asset about/assets/css/style-starter.css') }}">
-    {{-- <link href="{{ asset('assets/asset about/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet"> --}}
-    {{-- <link href="{{ asset('assets/asset about/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet"> --}}
+    <link href="{{ asset('assets/asset about/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/asset about/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
     {{-- <link href="{{ asset('assets/asset about/assets/css/aos.css') }}" rel="stylesheet"> --}}
-    {{-- <link href="{{ asset('assets/asset about/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet"> --}}
-    {{-- <link href="{{ asset('assets/asset about/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet"> --}}
+    <link href="{{ asset('assets/asset about/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/asset about/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
 
     <script>
@@ -268,12 +270,12 @@
                                 </a>
                                 <div class="author align-items-center">
                                     <img src="" alt="" class="img-fluid rounded-circle">
-                                    <ul class="blog-meta">
+                                    {{-- <ul class="blog-meta">
                                         <li class="meta-item blog-lesson">
                                             <span class="meta-value" style="margin-left: -23%"> February 06 2024
                                             </span>
                                         </li>
-                                    </ul>
+                                    </ul> --}}
                                 </div>
                             </div>
                         </div>
@@ -292,11 +294,11 @@
                                     Mahasiswa MBKM Peserta PMM 4 dan MSIB 6 IT Del</a>
                                 <div class="author align-items-center">
                                     <img src="" alt="" class="img-fluid rounded-circle">
-                                    <ul class="blog-meta">
+                                    {{-- <ul class="blog-meta">
                                         <li class="meta-item blog-lesson">
                                             <span class="meta-value" style="margin-left: -23%"> January 24 2024
                                         </li>
-                                    </ul>
+                                    </ul> --}}
                                 </div>
                             </div>
                         </div>
@@ -316,11 +318,11 @@
                                 </a>
                                 <div class="author align-items-center">
                                     <img src="" alt="" class="img-fluid rounded-circle">
-                                    <ul class="blog-meta">
+                                    {{-- <ul class="blog-meta">
                                         <li class="meta-item blog-lesson">
                                             <span class="meta-value" style="margin-left: -23%"> February 12 2024
                                         </li>
-                                    </ul>
+                                    </ul> --}}
                                 </div>
                             </div>
                         </div>
@@ -687,6 +689,7 @@
         <!-- ======= Akhir Peta Kampus ======= -->
 
 
+
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
         <footer class="footer_area section_padding_130_0">
             <div class="container">
@@ -694,8 +697,8 @@
 
                     <div class="col-12 col-sm-6 col-lg-4">
                         <div class="single-footer-widget section_padding_0_130">
-                            <img src="{{ asset('assets/img/footer/footer.png') }}" alt="Footer Logo" class="footer-logo mb-3"
-                                style="max-width: 130px;">
+                            <img src="{{ asset('assets/img/footer/footer.png') }}" alt="Footer Logo"
+                                class="footer-logo mb-3" style="max-width: 130px;">
 
                             <div class="copywrite-text mb-5">
                                 <p class="mb-0"><i class="lni-heart mr-1"></i><a class="ml-1"
@@ -725,11 +728,11 @@
 
                             <div class="footer_menu">
                                 <ul>
-                                    <li><a href="#">Tentang Del</a></li>
-                                    <li><a href="#">Pendaftaran Mahasiswa Baru</a></li>
-                                    <li><a href="#">Informasi Beasiswa</a></li>
-                                    <li><a href="#">Unduhan</a></li>
-                                    <li><a href="#">Karir</a></li>
+                                    <li><a href="https://www.del.ac.id/?page_id=1006">Tentang Del</a></li>
+                                    <li><a href="https://spmb.del.ac.id/">Pendaftaran Mahasiswa Baru</a></li>
+                                    <li><a href="https://www.del.ac.id/?page_id=14564">Informasi Beasiswa</a></li>
+                                    {{-- <li><a href="#">Unduhan</a></li> --}}
+                                    <li><a href="https://www.del.ac.id/?page_id=7511">Karir</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -761,17 +764,16 @@
                                         data-toggle="tooltip" data-placement="top" title
                                         data-original-title="Facebook"><i class="fa fa-facebook text-primary"></i></a>
                                     <a href="https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fwww.del.ac.id%2F&ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Efollow%7Ctwgr%5Einstitut_del&region=follow_link&screen_name=institut_del"
-                                        data-toggle="tooltip" data-placement="top" title data-original-title="Twitter"><i
-                                            class="fa fa-twitter text-info"></i></a>
-                                    <a href="https://www.youtube.com/channel/UCyzrsLKGZPQFGHIDfN53koQ"
-                                        data-toggle="tooltip" data-placement="top" title data-original-title="YouTube"><i
-                                            class="fa fa-youtube text-danger"></i></a>
-                                    <a href="https://www.instagram.com/it.del?igsh=MTlnNnQybnM2NHVubA=="
                                         data-toggle="tooltip" data-placement="top" title
-                                        data-original-title="Instagram"><i class="fa fa-instagram text-purple"></i></a>
+                                        data-original-title="Twitter"><i class="fa fa-twitter text-info"></i></a>
+                                    <a href="https://www.youtube.com/@institutteknologidel1337" data-toggle="tooltip"
+                                        data-placement="top" title data-original-title="YouTube"><i
+                                            class="fa fa-youtube text-danger"></i></a>
+                                    <a href="https://www.instagram.com/vokasi.itdel?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                                        data-toggle="tooltip" data-placement="top" title
+                                        data-original-title="Instagram"><i
+                                            class="fa fa-instagram text-purple"></i></a>
                                 </div>
-
-
                             </div>
                         </div>
                     </div>

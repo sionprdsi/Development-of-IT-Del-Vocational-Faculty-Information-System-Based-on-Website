@@ -1071,14 +1071,14 @@
                                     <h4><a href="https://www.del.ac.id/?p=15337">IT Del Peringkat 1 Nasional untuk
                                             Computing Track dan Innovation Track pada Huawei ICT Competition 2023</a>
                                     </h4>
-                                    <time datetime="2020-01-01">February 06 2024</time>
+                                    {{-- <time datetime="2020-01-01">February 06 2024</time> --}}
                                 </div>
 
                                 <div class="post-item clearfix">
                                     <img src="{{ asset('assets/img/berita2.jpeg') }}" alt="">
                                     <h4><a href="https://www.del.ac.id/?p=15386">Kegiatan Pemberangkatan dan Onboarding
                                             Mahasiswa MBKM Peserta PMM 4 dan MSIB 6 IT Delt</a></h4>
-                                    <time datetime="2020-01-01">January 24 2024</time>
+                                    {{-- <time datetime="2020-01-01">January 24 2024</time> --}}
                                 </div>
 
                                 <div class="post-item clearfix">
@@ -1086,7 +1086,7 @@
                                     <h4><a href="https://www.del.ac.id/?p=15439">IT Del dan PT Privy Identitas Digital
                                             Jalin Kerjasama terkait Training and Oportunities Program (TOP)</a>
                                     </h4>
-                                    <time datetime="2020-01-01">February 12 2024</time>
+                                    {{-- <time datetime="2020-01-01">February 12 2024</time> --}}
                                 </div>
                             </div><!-- End sidebar recent posts-->
 
@@ -1189,11 +1189,11 @@
 
                             <div class="footer_menu">
                                 <ul>
-                                    <li><a href="#">Tentang Del</a></li>
-                                    <li><a href="#">Pendaftaran Mahasiswa Baru</a></li>
-                                    <li><a href="#">Informasi Beasiswa</a></li>
-                                    <li><a href="#">Unduhan</a></li>
-                                    <li><a href="#">Karir</a></li>
+                                    <li><a href="https://www.del.ac.id/?page_id=1006">Tentang Del</a></li>
+                                    <li><a href="https://spmb.del.ac.id/">Pendaftaran Mahasiswa Baru</a></li>
+                                    <li><a href="https://www.del.ac.id/?page_id=14564">Informasi Beasiswa</a></li>
+                                    {{-- <li><a href="#">Unduhan</a></li> --}}
+                                    <li><a href="https://www.del.ac.id/?page_id=7511">Karir</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -1227,16 +1227,14 @@
                                     <a href="https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fwww.del.ac.id%2F&ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Efollow%7Ctwgr%5Einstitut_del&region=follow_link&screen_name=institut_del"
                                         data-toggle="tooltip" data-placement="top" title
                                         data-original-title="Twitter"><i class="fa fa-twitter text-info"></i></a>
-                                    <a href="https://www.youtube.com/channel/UCyzrsLKGZPQFGHIDfN53koQ"
+                                    <a href="https://www.youtube.com/@institutteknologidel1337"
                                         data-toggle="tooltip" data-placement="top" title
                                         data-original-title="YouTube"><i class="fa fa-youtube text-danger"></i></a>
-                                    <a href="https://www.instagram.com/it.del?igsh=MTlnNnQybnM2NHVubA=="
+                                    <a href="https://www.instagram.com/vokasi.itdel?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                                         data-toggle="tooltip" data-placement="top" title
                                         data-original-title="Instagram"><i
                                             class="fa fa-instagram text-purple"></i></a>
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
