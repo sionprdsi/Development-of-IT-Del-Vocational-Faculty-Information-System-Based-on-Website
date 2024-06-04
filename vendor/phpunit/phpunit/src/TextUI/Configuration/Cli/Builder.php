@@ -251,6 +251,8 @@ final class Builder
         $debug                             = false;
 
         foreach ($options[0] as $option) {
+            $optionAllowedMultipleTimes = false;
+
             switch ($option[0]) {
                 case '--colors':
                     $colors = $option[1] ?: \PHPUnit\TextUI\Configuration\Configuration::COLOR_AUTO;
@@ -364,6 +366,8 @@ final class Builder
                         }
                     }
 
+                    $optionAllowedMultipleTimes = true;
+
                     break;
 
                 case 'h':
@@ -399,7 +403,7 @@ final class Builder
                 case '--use-baseline':
                     $useBaseline = $option[1];
 
-                    if (!is_file($useBaseline) && basename($useBaseline) === $useBaseline) {
+                    if (basename($useBaseline) === $useBaseline && !is_file($useBaseline)) {
                         $useBaseline = getcwd() . DIRECTORY_SEPARATOR . $useBaseline;
                     }
 
@@ -845,7 +849,9 @@ final class Builder
                     break;
             }
 
-            $this->markProcessed($option[0]);
+            if (!$optionAllowedMultipleTimes) {
+                $this->markProcessed($option[0]);
+            }
         }
 
         if (empty($iniSettings)) {

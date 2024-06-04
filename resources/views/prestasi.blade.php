@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>VOKASI Institut Teknologi Del</title>
+    <title>Fakultas Vokasi</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -94,26 +94,17 @@
     <!-- Template Main CSS File -->
     <link href="{{ asset('assets/assets - prestasi/css/style.css') }}" rel="stylesheet">
 
+
+    <style>
+
+    </style>
 </head>
 
 <body>
 
-    <!-- ======= Top Bar ======= -->
-    <div id="topbar" class="d-flex align-items-center fixed-top">
-        <div class="container d-flex justify-content-between">
-            <div class="contact-info d-flex align-items-center">
-                <i class="bi bi-envelope"></i> <a href="info@example.com">info@del.ac.id</a>
-                <i class="bi bi-phone"></i> +62 632 331234
-            </div>
-            <div class="d-none d-lg-flex social-links align-items-center">
-                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-            </div>
-        </div>
-    </div>
-    <!-- ======= Akhir Top Bar ======= -->
+    <!-- topbar -->
+    @include('includes/topbar')
+    <!-- Akhir topbar -->
 
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
@@ -128,23 +119,7 @@
             </h1>
 
             <!-- navbar -->
-            <nav id="navbar" class="navbar order-last order-lg-0">
-                <ul>
-                    <li><a class="nav-link scrollto" href="/">Beranda</a></li>
-                    <li><a class="nav-link scrollto" href="/tentang">Tentang</a></li>
-                    <li class="dropdown">
-                        <a class="nav-link scrollto" href="/tentang">Program Studi <i
-                                class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="/programstudiD4TRPL">D-IV Teknologi Rekayasa Perangkat Lunak</a></li>
-                            <li><a href="/programstudiD3TK">D-III Teknologi Komputer</a></li>
-                            <li><a href="/programstudiD3TI">D-III Teknologi Informasi</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="nav-link scrollto active" href="/prestasi">Prestasi</a></li>
-                </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav>
+            @include('includes.navbar')
             <!-- Akhir navbar -->
 
         </div>
@@ -157,7 +132,7 @@
         <section class="breadcrumbs">
             <div class="container">
                 <div class="d-flex justify-content-between align-items-center">
-                    <h2 class="breadcrumbs-title">Prestasi Vokasi</h2>
+                    <h2 class="breadcrumbs-title">Prestasi Mahasiswa Vokasi</h2>
                     <ol itemscope itemtype="http://schema.org/BreadcrumbList">
                         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                             <a itemprop="item" href="/">
@@ -166,7 +141,9 @@
                             <meta itemprop="position" content="1" />
                         </li>
                         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                            <span itemprop="name" style="color: #1977cc">Prestasi</span>
+                            <a itemprop="item" href="/prestasi">
+                                <span itemprop="name" style="color: #1977cc">Prestasi</span>
+                            </a>
                             <meta itemprop="position" content="2" />
                         </li>
                     </ol>
@@ -178,386 +155,173 @@
         <!-- ======= Blog Section ======= -->
         <section id="blog" class="blog">
             <div class="container" data-aos="fade-up">
-
                 <div class="row">
-
                     <div class="col-lg-8 entries">
 
-                        <article class="entry">
-
-                            <div class="entry-img">
-                                <img src="{{ asset('assets/img/prestasi/prestasi1.jpg') }}" alt=""
-                                    class="img-fluid">
+                        <!-- Filter Tahun -->
+                        <div style="margin-bottom: 20px; text-align: center;">
+                            <form action="{{ route('prestasi') }}" method="GET"
+                                style="display: inline-flex; align-items: center;">
+                                <label for="tahun" style="margin-right: 10px; font-weight: bold;">Filter by
+                                    Year:</label>
+                                <select name="tahun" id="tahun"
+                                    style="padding: 5px 10px; border-radius: 4px; border: 1px solid #ddd; margin-right: 10px; font-size: 14px;">
+                                    <option value="">All Years</option>
+                                    @foreach ($prestasiByYear as $tahun => $prestasis)
+                                        <option value="{{ $tahun }}"
+                                            {{ $selectedYear == $tahun ? 'selected' : '' }}>{{ $tahun }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                                <button type="submit"
+                                    style="padding: 5px 15px; background-color: #007bff; color: white; border: none; border-radius: 4px; font-size: 14px; cursor: pointer;">Filter</button>
+                            </form>
+                        </div>
+                        <!-- Notifikasi -->
+                        @if (isset($notifikasi) && !empty($notifikasi))
+                            <div class="alert alert-info mb-4" role="alert">
+                                {{ $notifikasi }}
                             </div>
+                        @endif
+                        @foreach ($prestasiByYear as $tahun => $prestasis)
+                            <article class="entry">
+                                <div class="container py-5">
+                                    <!-- Link to Google Fonts -->
+                                    <link
+                                        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+                                        rel="stylesheet">
 
-                            <h2 class="entry-title">
-                                <a href="https://www.del.ac.id/?p=15454">Penandatanganan Perjanjian Kerjasama Fakultas
-                                    Vokasi IT Del
-                                    dan SMK Negeri 1 Lumbanjulu</a>
-                            </h2>
+                                    <header class="text-center text-white"
+                                        style="background-color: #f8f9fa; color: #333; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); font-family: 'Roboto', sans-serif;">
+                                        <h1 class="display-4"
+                                            style="font-size: 2em; margin-bottom: 10px; font-weight: 700;">Prestasi
+                                            Mahasiswa</h1>
+                                        <p class="lead mb-0"
+                                            style="font-size: 1.2em; margin-top: 0; font-weight: 400;">Tahun
+                                            {{ $tahun }}</p>
+                                    </header>
 
-                            <div class="entry-meta">
-                                <ul>
-                                    {{-- <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
-                                            href="blog-single.html"><time datetime="2020-01-01">February 12
-                                                2024</time></a>
-                                    </li> --}}
-                                </ul>
-                            </div>
+                                    <!-- Tambahkan opsi jumlah entri di bawah setiap tahun -->
+                                    <div style="margin-top: 20px; text-align: center;">
+                                        <form action="{{ route('prestasi') }}" method="GET"
+                                            style="display: inline-flex; align-items: center;">
+                                            <input type="hidden" name="tahun" value="{{ $tahun }}">
+                                            <label for="jumlah_entri_{{ $tahun }}"
+                                                style="margin-right: 10px; font-weight: bold;">Show</label>
+                                            <div style="position: relative; display: inline-block;">
+                                                <select name="jumlah_entri_{{ $tahun }}"
+                                                    id="jumlah_entri_{{ $tahun }}"
+                                                    style="appearance: none; padding: 5px 30px 5px 10px; border-radius: 4px; border: 1px solid #ddd; margin-right: 10px; font-size: 14px; background: white url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMCAxMCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwIj48cGF0aCBkPSJNNSAwbC01IDUgNSA1IDUtNXoiIGZpbGw9IiNjY2MiLz48L3N2Zz4=') no-repeat right 10px center; background-size: 10px 10px;">
+                                                    <option value="5"
+                                                        {{ $request->input('jumlah_entri_' . $tahun) == 5 ? 'selected' : '' }}>
+                                                        5</option>
+                                                    <option value="10"
+                                                        {{ $request->input('jumlah_entri_' . $tahun) == 10 ? 'selected' : '' }}>
+                                                        10</option>
+                                                    <option value="15"
+                                                        {{ $request->input('jumlah_entri_' . $tahun) == 15 ? 'selected' : '' }}>
+                                                        15</option>
+                                                    <option value="20"
+                                                        {{ $request->input('jumlah_entri_' . $tahun) == 20 ? 'selected' : '' }}>
+                                                        20</option>
+                                                </select>
+                                            </div>
+                                            <label for="jumlah_entri_{{ $tahun }}"
+                                                style="margin-right: 10px; font-weight: bold;">entries</label>
+                                            <button type="submit"
+                                                style="padding: 5px 15px; background-color: #007bff; color: white; border: none; border-radius: 4px; font-size: 14px; cursor: pointer;">Terapkan</button>
+                                        </form>
+                                    </div>
+                                    <div class="row py-5">
+                                        <div class="col-lg-10 mx-auto">
+                                            <div class="card rounded shadow border-0">
+                                                <div class="card-body p-5 bg-white rounded">
+                                                    <div class="table-responsive">
+                                                        <table id="example" style="width:100%"
+                                                            class="table table-striped table-bordered">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>No</th>
+                                                                    <th>Nama</th>
+                                                                    <th>Nama Prestasi</th>
+                                                                    <th>Prestasi</th>
+                                                                    <th>Tingkat</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                @foreach ($prestasis as $index => $prestasi)
+                                                                    <tr>
+                                                                        <td>{{ $index + 1 }}</td>
+                                                                        <td>{{ $prestasi->nama }}</td>
+                                                                        <td>{{ $prestasi->nama_prestasi }}</td>
+                                                                        <td>{{ $prestasi->juara }}</td>
+                                                                        <td>{{ $prestasi->tingkat }}</td>
+                                                                    </tr>
+                                                                @endforeach
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                            <div class="entry-content">
-                                <p>
-                                    Pada hari Rabu, 31 Januari 2024 telah dilaksanakan penandatanganan Perjanjian Kerja
-                                    Sama (PKS) antara Fakultas Vokasi, Institut Teknologi Del dan SMK Negeri 1
-                                    Lumbanjulu tentang Kerjasama Penguji Eksternal Uji Kompetensi Keahlian (UKK)
-                                    Praktek. Kerjasama ini meliputi pelaksanaan Uji Kompetensi, Penyiapan Materi Uji
-                                    Kompetensi, dan Penerbitan Sertifikat Uji Kompetensi.....
-                                </p>
-                                <div class="read-more">
-                                    <a href="https://www.del.ac.id/?p=15454">Baca Selengkapnya</a>
                                 </div>
-                            </div>
 
-                        </article><!-- End blog entry -->
+                            </article><!-- End blog entry -->
+                        @endforeach
+                        <!-- Pagination -->
+                        <nav aria-label="Page navigation example" class="ms-auto">
+                            <ul class="pagination">
+                                @if ($prestasiQuery->previousPageUrl())
+                                    <li class="page-item">
+                                        <a class="page-link" href="{{ $prestasiQuery->previousPageUrl() }}"
+                                            aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
+                                @else
+                                    <li class="page-item disabled">
+                                        <span class="page-link">&laquo;</span>
+                                    </li>
+                                @endif
 
-                        <article class="entry">
+                                <li class="page-item active">
+                                    <span class="page-link">{{ $prestasiQuery->currentPage() }}</span>
+                                </li>
 
-                            <div class="entry-img">
-                                <img src="{{ asset('assets/img/prestasi/prestasi2.jpg') }}" alt=""
-                                    class="img-fluid">
-                            </div>
-
-                            <h2 class="entry-title">
-                                <a href="https://www.del.ac.id/?p=15125">Monitoring dan Evaluasi (Monev) Internal
-                                    Program Matching
-                                    Fund (MF) Vokasi Tahun 2023</a>
-                            </h2>
-
-                            <div class="entry-meta">
-                                <ul>
-                                    {{-- <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
-                                            href="blog-single.html"><time datetime="2020-01-01">October 17
-                                                2023</time></a>
-                                    </li> --}}
-                                </ul>
-                            </div>
-
-                            <div class="entry-content">
-                                <p>
-                                    Sehubungan dengan akan dilaksanakannya kegiatan Monitoring dan Evaluasi (Monev)
-                                    Program Matching Fund (MF) Vokasi oleh Direktorat Akademik Pendidikan Tinggi Vokasi,
-                                    pada hari ini Senin tanggal 16 Oktob....
-                                </p>
-                                <div class="read-more">
-                                    <a href="https://www.del.ac.id/?p=15125">Baca Selengkapnya</a>
-                                </div>
-                            </div>
-
-                        </article><!-- End blog entry -->
-
-                        <article class="entry">
-
-                            <div class="entry-img">
-                                <img src="{{ asset('assets/img/prestasi/prestasi3.jpg') }}" alt=""
-                                    class="img-fluid">
-                            </div>
-
-                            <h2 class="entry-title">
-                                <a href="https://www.del.ac.id/?p=13878">Tiga Mahasiswa FAKULTAS VOKASI Institut
-                                    Teknologi Del Lolos
-                                    Program IIVOSMA (Indonesian International Vocation Student Mobility Award) 2022</a>
-                            </h2>
-
-                            <div class="entry-meta">
-                                <ul>
-                                    {{-- <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
-                                            href="https://www.del.ac.id/?p=13878"><time datetime="2020-01-01">June 10
-                                                2022</time></a>
-                                    </li> --}}
-                                </ul>
-                            </div>
-
-                            <div class="entry-content">
-                                <p>
-                                    Selamat kepada Fakultas Vokasi IT Del atas lolosnya 3 mahasiswa untuk mengikuti
-                                    program IIVOSMA 2022 (Indonesian International Vocation Student Mobility Award)
-                                    tahun 2022. IIVOSMA merupakan program yang diselenggarakan oleh Kementerian
-                                    Pendidikan, Kebudayaan, Riset, dan Teknologi untuk...
-                                </p>
-                                <div class="read-more">
-                                    <a href="https://www.del.ac.id/?p=13878">Baca Selengkapnya</a>
-                                </div>
-                            </div>
-
-                        </article><!-- End blog entry -->
-
-                        <article class="entry">
-
-                            <div class="entry-img">
-                                <img src="{{ asset('assets/img/prestasi/prestasi4.jpg') }}" alt=""
-                                    class="img-fluid">
-                            </div>
-
-                            <h2 class="entry-title">
-                                <a href="https://www.del.ac.id/?p=15020">Lima Mahasiswi IT Del Mengikuti Program Kelas
-                                    Inovasi 1
-                                    tahun di Beijing Genome Institute, China</a>
-                            </h2>
-
-                            <div class="entry-meta">
-                                <ul>
-                                    {{-- <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
-                                            href="https://www.del.ac.id/?p=15020"><time
-                                                datetime="2020-01-01">September 13
-                                                2023</time></a>
-                                    </li> --}}
-
-                                </ul>
-                            </div>
-
-                            <div class="entry-content">
-                                <p>
-                                    Pada Hari Senin, 11 September 2023 dilakukan Presentasi Rencana Penelitian dan
-                                    Pemberangkatan Lima Mahasiswi IT Del ke BGI (Beijing Genomics Institute), China.
-                                    Pada kesempatan ini turut hadir Bapak Dr. Arnaldo Marulitua Sinaga, ST., M.InfoTech.
-                                    (Rektor IT Del), Bapak Dr. Johannes Harungguan Sianipar, S.T., M.T. (Wakil Rektor I
-                                    Bidang Akademik dan Kemahasiswaan), Bapak Humasak Tommy Argo Simanjuntak, ST, M.ISD
-                                    (Wakil Rektor III Bidang Kemitraan, Inovasi dan Kewirausahaan),...
-                                </p>
-                                <div class="read-more">
-                                    <a href="https://www.del.ac.id/?p=15020">Baca Selengkapnya</a>
-                                </div>
-                            </div>
-
-                        </article><!-- End blog entry -->
-
-
+                                @if ($prestasiQuery->nextPageUrl())
+                                    <li class="page-item">
+                                        <a class="page-link" href="{{ $prestasiQuery->nextPageUrl() }}"
+                                            aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                @else
+                                    <li class="page-item disabled">
+                                        <span class="page-link">&raquo;</span>
+                                    </li>
+                                @endif
+                            </ul>
+                        </nav>
+                        <!-- Pagination -->
                     </div><!-- End blog entries list -->
 
-                    <div class="col-lg-4">
-
-                        <div class="sidebar">
-
-                            <h3 class="sidebar-title">Pencarian</h3>
-                            <div class="sidebar-item search-form">
-                                <form action="">
-                                    <input type="text">
-                                    <button type="submit"><i class="bi bi-search"></i></button>
-                                </form>
-                            </div><!-- End sidebar search formn-->
-
-                            <h3 class="sidebar-title">Program Studi</h3>
-                            <div class="sidebar-item categories">
-                                <ul>
-                                    <li><a href="/programstudiD4TRPL">D-IV Teknologi Rekayasa Perangkat Lunak </a></li>
-                                    <li><a href="/programstudiD3TK">D-III Teknologi Komputer </a></li>
-                                    <li><a href="/programstudiD3TI">D-III Teknologi Informasi</a></li>
-                                </ul>
-                            </div><!-- End sidebar categories-->
-
-                            <h3 class="sidebar-title">Kilas Vokasi</h3>
-                            <div class="sidebar-item recent-posts">
-                                <div class="post-item clearfix">
-                                    <img src="{{ asset('assets/img/berita1.jpeg') }}" alt="">
-                                    <h4><a href="https://www.del.ac.id/?p=15337">IT Del Peringkat 1 Nasional untuk
-                                            Computing Track dan Innovation Track pada Huawei ICT Competition 2023</a>
-                                    </h4>
-                                    {{-- <time datetime="2020-01-01">February 06 2024</time> --}}
-                                </div>
-
-                                <div class="post-item clearfix">
-                                    <img src="{{ asset('assets/img/berita2.jpeg') }}" alt="">
-                                    <h4><a href="https://www.del.ac.id/?p=15386">Kegiatan Pemberangkatan dan Onboarding
-                                            Mahasiswa MBKM Peserta PMM 4 dan MSIB 6 IT Delt</a></h4>
-                                    {{-- <time datetime="2020-01-01">January 24 2024</time> --}}
-                                </div>
-
-                                <div class="post-item clearfix">
-                                    <img src="{{ asset('assets/img/berita3.jpeg') }}" alt="">
-                                    <h4><a href="https://www.del.ac.id/?p=15439">IT Del dan PT Privy Identitas Digital
-                                            Jalin Kerjasama terkait Training and Oportunities Program (TOP)</a>
-                                    </h4>
-                                    {{-- <time datetime="2020-01-01">February 12 2024</time> --}}
-                                </div>
-                            </div><!-- End sidebar recent posts-->
-
-                            <h3 class="sidebar-title"><i class="fas fa-link"></i> Link</h3>
-                            <div class="sidebar-item tags">
-                                <ul>
-                                    <li><i class="fas fa-caret-right"></i> <a
-                                            href="https://apipuro.del.ac.id/v1/file/e153b6e1b2b5eb074bc747f953615932">Pedoman
-                                            Akademik 2021/2022</a></li>
-                                    <li><i class="fas fa-caret-right"></i> <a
-                                            href="https://apipuro.del.ac.id/v1/file/b7ba4f13314e641b92f3a08e6ffa6bea">Kalender
-                                            Akademik T.A. 2023/2024</a></li>
-                                    <li><i class="fas fa-caret-right"></i> <a
-                                            href="https://apipuro.del.ac.id/v1/file/f4526f134dc70f9568d2ecbfe0471098">Kalender
-                                            Kegiatan Kemahasiswaan 2022/2023</a></li>
-                                    <li><i class="fas fa-caret-right"></i> <a
-                                            href="https://apipuro.del.ac.id/v1/file/bb8a366791a6e01f81af015816a72caf">Pedoman
-                                            PKM Institut Teknologi Del</a></li>
-                                    <li><i class="fas fa-caret-right"></i> <a
-                                            href="http://puskom.del.ac.id/">Peraturan Penggunaan Fasilitas Laboratorium
-                                            Komputasi</a></li>
-                                    <li><i class="fas fa-caret-right"></i> <a
-                                            href="https://apipuro.del.ac.id/v1/file/7ac27730a659c0a85d9c56bfa25b1e0e">Surat
-                                            Edaran Penerima Beasiswa Prestasi dan Penghargaan 2021</a></li>
-                                    <li><i class="fas fa-caret-right"></i> <a
-                                            href="https://apipuro.del.ac.id/v1/file/7beab51e372ab8a676af1c3d9c10360a">Addendum
-                                            SK Rektor Tentang Biaya Pendaftaran, Biaya Pendidikan Dan Biaya Wisuda TA
-                                            2020/2021</a></li>
-                                    <li><i class="fas fa-caret-right"></i> <a
-                                            href="https://cis.del.ac.id/dashboard/link/view">Referensi Perpustakaan:
-                                            Jurnal / Paper / Book</a></li>
-                                    <li><i class="fas fa-caret-right"></i> <a
-                                            href="https://apipuro.del.ac.id/v1/file/561e23644092e75531d32b3ca59d6fc3">SOP
-                                            Pemakaian Entrance Hall oleh Mahasiswa IT Del</a></li>
-                                    <li><i class="fas fa-caret-right"></i> <a
-                                            href="https://apipuro.del.ac.id/v1/file/f4cf524c658b13d1dd39a2ace59baa24">Surat
-                                            Edaran WR 1 Manajemen Komplain Mahasiswa</a></li>
-                                    <li><i class="fas fa-caret-right"></i> <a
-                                            href="https://apipuro.del.ac.id/v1/file/1c93e1a9ea7542238cb2534d8cc1d91e">Surat
-                                            Edaran WR1 tentang Pengelolaan Waktu dengan Baik dan Ijin Keluar Kampus</a>
-                                    </li>
-                                    <li><i class="fas fa-caret-right"></i> <a
-                                            href="https://apipuro.del.ac.id/v1/file/2a994858fe11012c42f62dfc8ef090eb">Pedoman
-                                            Penetapan Sanksi Pelanggaran Mahasiswa</a></li>
-                                    <li><i class="fas fa-caret-right"></i> <a
-                                            href="https://cis.del.ac.id/artk/artikel-post/view?q=B1EV3ReTYkvmNUFg-CD7X1Vr_BcgH-O4nYTUaH3J1Yo">Dokumen
-                                            User Manual Aplikasi IT Del</a></li>
-                                    <li><i class="fas fa-caret-right"></i> <a
-                                            href="https://apipuro.del.ac.id/v1/file/1dfb80eb87b3122dd4607bec6f4437be">Panduan
-                                            Sistem Kredit Kegiatan Mahasiswa (SKKM)</a></li>
-                                </ul>
-                            </div><!-- End sidebar tags-->
-
-
-                        </div><!-- End sidebar -->
-
-                    </div><!-- End blog sidebar -->
-
+                    <!-- sidebar -->
+                    @include('includes/sidebar5')
+                    <!-- Akhir sidebar -->
                 </div>
 
-                <!-- Pagination -->
-                <nav aria-label="Page navigation example" class="ms-auto">
-                    <ul class="pagination">
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- Pagination -->
 
             </div>
         </section><!-- End Blog Section -->
 
 
 
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-        <footer class="footer_area section_padding_130_0">
-            <div class="container">
-                <div class="row">
 
-                    <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="single-footer-widget section_padding_0_130">
-                            <img src="{{ asset('assets/img/footer/footer.png') }}" alt="Footer Logo"
-                                class="footer-logo mb-3" style="max-width: 130px;">
-
-                            <div class="copywrite-text mb-5">
-                                <p class="mb-0"><i class="lni-heart mr-1"></i><a class="ml-1"
-                                        href="#">Fakultas Vokasi</a>
-                                </p>
-                                <p class="mb-0"><i class="lni-heart mr-1"></i><a class="ml-1"
-                                        href="#">Institut Teknologi
-                                        Del</a></p>
-                                <br>
-                                <p class="mb-0" style="text-align: justify;"><i class="lni-heart mr-1"></i><a
-                                        class="ml-1" href="#">Jl. Sisingamangaraja, Sitoluama Laguboti, Toba
-                                        Samosir Sumatera Utara,
-                                        Indonesia</a></p>
-
-                            </div>
-
-
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-12 col-sm-6 col-lg">
-                        <div class="single-footer-widget section_padding_0_130">
-
-                            <h5 class="widget-title">Pranala Penting</h5>
-
-                            <div class="footer_menu">
-                                <ul>
-                                    <li><a href="https://www.del.ac.id/?page_id=1006">Tentang Del</a></li>
-                                    <li><a href="https://spmb.del.ac.id/">Pendaftaran Mahasiswa Baru</a></li>
-                                    <li><a href="https://www.del.ac.id/?page_id=14564">Informasi Beasiswa</a></li>
-                                    {{-- <li><a href="#">Unduhan</a></li> --}}
-                                    <li><a href="https://www.del.ac.id/?page_id=7511">Karir</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-12 col-sm-6 col-lg">
-                        <div class="single-footer-widget section_padding_0_130">
-
-                            <h5 class="widget-title">Hubungi Kami</h5>
-
-                            <div class="footer_menu">
-                                <ul>
-                                    <li><a href="#">Kode Pos: 22381</a></li>
-                                    <li><a href="#">Telp : +62 632 331234</a></li>
-                                    <li><a href="#">Email : info@del.ac.id</a></li>
-                                    <li><a href="#">Karir : karir@del.ac.id</a></li>
-                                </ul>
-                                <br>
-                                <style>
-                                    .footer_social_area .fa-instagram {
-                                        color: purple;
-                                    }
-                                </style>
-
-                                <div class="footer_social_area">
-                                    <a href="https://www.facebook.com/profile.php?id=403538753086034&fref=ts"
-                                        data-toggle="tooltip" data-placement="top" title
-                                        data-original-title="Facebook"><i class="fa fa-facebook text-primary"></i></a>
-                                    <a href="https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fwww.del.ac.id%2F&ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Efollow%7Ctwgr%5Einstitut_del&region=follow_link&screen_name=institut_del"
-                                        data-toggle="tooltip" data-placement="top" title
-                                        data-original-title="Twitter"><i class="fa fa-twitter text-info"></i></a>
-                                    <a href="https://www.youtube.com/@institutteknologidel1337"
-                                        data-toggle="tooltip" data-placement="top" title
-                                        data-original-title="YouTube"><i class="fa fa-youtube text-danger"></i></a>
-                                    <a href="https://www.instagram.com/vokasi.itdel?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                                        data-toggle="tooltip" data-placement="top" title
-                                        data-original-title="Instagram"><i
-                                            class="fa fa-instagram text-purple"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script type="text/javascript"></script>
-
+        <!-- footer -->
+        @include('includes/footer')
+        <!-- Akhir footer -->
 
 
     </main><!-- End #main -->
@@ -579,6 +343,14 @@
 
     <!-- Template Main JS File -->
     <script src="{{ asset('assets/assets - prestasi/js/main.js') }}"></script>
+
+    <script>
+        $(function() {
+            $(document).ready(function() {
+                $('#example').DataTable();
+            });
+        });
+    </script>
 </body>
 
 </html>

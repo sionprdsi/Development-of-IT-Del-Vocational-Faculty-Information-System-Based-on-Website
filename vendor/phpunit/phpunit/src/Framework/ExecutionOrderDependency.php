@@ -88,11 +88,13 @@ final class ExecutionOrderDependency implements Stringable
         );
 
         foreach ($additional as $dependency) {
-            if (in_array($dependency->getTarget(), $existingTargets, true)) {
+            $additionalTarget = $dependency->getTarget();
+
+            if (in_array($additionalTarget, $existingTargets, true)) {
                 continue;
             }
 
-            $existingTargets[] = $dependency->getTarget();
+            $existingTargets[] = $additionalTarget;
             $existing[]        = $dependency;
         }
 
@@ -134,6 +136,9 @@ final class ExecutionOrderDependency implements Stringable
 
     public function __construct(string $classOrCallableName, ?string $methodName = null, bool $deepClone = false, bool $shallowClone = false)
     {
+        $this->deepClone    = $deepClone;
+        $this->shallowClone = $shallowClone;
+
         if ($classOrCallableName === '') {
             return;
         }
@@ -144,9 +149,6 @@ final class ExecutionOrderDependency implements Stringable
             $this->className  = $classOrCallableName;
             $this->methodName = !empty($methodName) ? $methodName : 'class';
         }
-
-        $this->deepClone    = $deepClone;
-        $this->shallowClone = $shallowClone;
     }
 
     public function __toString(): string

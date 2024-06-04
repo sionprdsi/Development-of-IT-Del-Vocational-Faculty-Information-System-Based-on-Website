@@ -2,6 +2,85 @@
 
 All notable changes of the PHPUnit 10.5 release series are documented in this file using the [Keep a CHANGELOG](https://keepachangelog.com/) principles.
 
+## [10.5.20] - 2024-04-24
+
+* [#5771](https://github.com/sebastianbergmann/phpunit/issues/5771): JUnit XML logger may crash when test that is run in separate process exits unexpectedly
+* [#5819](https://github.com/sebastianbergmann/phpunit/issues/5819): Duplicate keys from different data providers are not handled properly
+
+## [10.5.19] - 2024-04-17
+
+### Fixed
+
+* [#5818](https://github.com/sebastianbergmann/phpunit/issues/5818): Calling `method()` on a test stub created using `createStubForIntersectionOfInterfaces()` throws an unexpected exception
+
+## [10.5.18] - 2024-04-14
+
+### Deprecated
+
+* [#5812](https://github.com/sebastianbergmann/phpunit/pull/5812): Support for string array keys in data sets returned by data provider methods that do not match the parameter names of the test method(s) that use(s) them
+
+### Fixed
+
+* [#5795](https://github.com/sebastianbergmann/phpunit/issues/5795): Using `@testWith` annotation may generate `PHP Warning:  Uninitialized string offset 0`
+
+## [10.5.17] - 2024-04-05
+
+### Changed
+
+* The namespaces of dependencies are now prefixed with `PHPUnitPHAR` instead of just `PHPUnit` for the PHAR distribution of PHPUnit
+
+## [10.5.16] - 2024-03-28
+
+### Changed
+
+* [#5766](https://github.com/sebastianbergmann/phpunit/pull/5766): Do not use a shell in `proc_open()` if not really needed
+* [#5772](https://github.com/sebastianbergmann/phpunit/pull/5772): Cleanup process handling after dropping temp-file handling
+
+### Fixed
+
+* [#5570](https://github.com/sebastianbergmann/phpunit/pull/5570): Windows does not support exclusive locks on stdout
+
+## [10.5.15] - 2024-03-22
+
+### Fixed
+
+* [#5765](https://github.com/sebastianbergmann/phpunit/pull/5765): Be more forgiving with error handlers that do not respect error suppression
+
+## [10.5.14] - 2024-03-21
+
+### Changed
+
+* [#5747](https://github.com/sebastianbergmann/phpunit/pull/5747): Cache result of `Groups::groups()`
+* [#5748](https://github.com/sebastianbergmann/phpunit/pull/5748): Improve performance of `NamePrettifier::prettifyTestMethodName()`
+* [#5750](https://github.com/sebastianbergmann/phpunit/pull/5750): Micro-optimize `NamePrettifier::prettifyTestMethodName()` once again
+
+### Fixed
+
+* [#5760](https://github.com/sebastianbergmann/phpunit/issues/5760): TestDox printer does not display details about exceptions raised in before-test methods
+
+## [10.5.13] - 2024-03-12
+
+### Changed
+
+* [#5727](https://github.com/sebastianbergmann/phpunit/pull/5727): Prevent duplicate call of `NamePrettifier::prettifyTestMethodName()`
+* [#5739](https://github.com/sebastianbergmann/phpunit/pull/5739): Micro-optimize `NamePrettifier::prettifyTestMethodName()`
+* [#5740](https://github.com/sebastianbergmann/phpunit/pull/5740): Micro-optimize `TestRunner::runTestWithTimeout()`
+* [#5741](https://github.com/sebastianbergmann/phpunit/pull/5741): Save call to `Telemetry\System::snapshot()`
+* [#5742](https://github.com/sebastianbergmann/phpunit/pull/5742): Prevent file IO when not strictly necessary
+* [#5743](https://github.com/sebastianbergmann/phpunit/pull/5743): Prevent unnecessary `ExecutionOrderDependency::getTarget()` call
+* [#5744](https://github.com/sebastianbergmann/phpunit/pull/5744): Simplify `NamePrettifier::prettifyTestMethodName()`
+
+### Fixed
+
+* [#5351](https://github.com/sebastianbergmann/phpunit/issues/5351): Incorrect code coverage metadata does not prevent code coverage data from being collected
+* [#5746](https://github.com/sebastianbergmann/phpunit/issues/5746): Using `-d` CLI option multiple times triggers warning
+
+## [10.5.12] - 2024-03-09
+
+### Fixed
+
+* [#5652](https://github.com/sebastianbergmann/phpunit/issues/5652): `HRTime::duration()` throws `InvalidArgumentException`
+
 ## [10.5.11] - 2024-02-25
 
 ### Fixed
@@ -13,11 +92,20 @@ All notable changes of the PHPUnit 10.5 release series are documented in this fi
 
 ## [10.5.10] - 2024-02-04
 
+### Changed
+
+* Improve output of `--check-version` CLI option
+* Improve description of `--check-version` CLI option
+
 ### Fixed
 
 * [#5692](https://github.com/sebastianbergmann/phpunit/issues/5692): `--log-events-text` and `--log-events-verbose-text` require the destination file to exit
 
 ## [10.5.9] - 2024-01-22
+
+### Changed
+
+* Show help for `--manifest`, `--sbom`, and `--composer-lock` when the PHAR is used
 
 ### Fixed
 
@@ -71,6 +159,10 @@ All notable changes of the PHPUnit 10.5 release series are documented in this fi
 
 ## [10.5.3] - 2023-12-13
 
+### Changed
+
+* Make PHAR build reproducible (the only remaining differences were in the timestamps for the files in the PHAR)
+
 ### Deprecated
 
 * `Test\AssertionFailed` and `Test\AssertionSucceeded` events
@@ -112,6 +204,15 @@ All notable changes of the PHPUnit 10.5 release series are documented in this fi
 
 * [#5563](https://github.com/sebastianbergmann/phpunit/issues/5563): `createMockForIntersectionOfInterfaces()` does not automatically register mock object for expectation verification
 
+[10.5.20]: https://github.com/sebastianbergmann/phpunit/compare/10.5.19...10.5.20
+[10.5.19]: https://github.com/sebastianbergmann/phpunit/compare/10.5.18...10.5.19
+[10.5.18]: https://github.com/sebastianbergmann/phpunit/compare/10.5.17...10.5.18
+[10.5.17]: https://github.com/sebastianbergmann/phpunit/compare/10.5.16...10.5.17
+[10.5.16]: https://github.com/sebastianbergmann/phpunit/compare/10.5.15...10.5.16
+[10.5.15]: https://github.com/sebastianbergmann/phpunit/compare/10.5.14...10.5.15
+[10.5.14]: https://github.com/sebastianbergmann/phpunit/compare/10.5.13...10.5.14
+[10.5.13]: https://github.com/sebastianbergmann/phpunit/compare/10.5.12...10.5.13
+[10.5.12]: https://github.com/sebastianbergmann/phpunit/compare/10.5.11...10.5.12
 [10.5.11]: https://github.com/sebastianbergmann/phpunit/compare/10.5.10...10.5.11
 [10.5.10]: https://github.com/sebastianbergmann/phpunit/compare/10.5.9...10.5.10
 [10.5.9]: https://github.com/sebastianbergmann/phpunit/compare/10.5.8...10.5.9

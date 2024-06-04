@@ -4,11 +4,13 @@
  * Mockery (https://docs.mockery.io/)
  *
  * @copyright https://github.com/mockery/mockery/blob/HEAD/COPYRIGHT.md
- * @license   https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
- * @link      https://github.com/mockery/mockery for the canonical source repository
+ * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
+ * @link https://github.com/mockery/mockery for the canonical source repository
  */
 
 namespace Mockery;
+
+use function spl_object_hash;
 
 class Undefined
 {
@@ -17,6 +19,7 @@ class Undefined
      *
      * @param string $method
      * @param array $args
+     *
      * @return self
      */
     public function __call($method, array $args)
@@ -25,12 +28,12 @@ class Undefined
     }
 
     /**
-     * Return a string, avoiding E_RECOVERABLE_ERROR
+     * Return a string, avoiding E_RECOVERABLE_ERROR.
      *
      * @return string
      */
     public function __toString()
     {
-        return __CLASS__ . ":" . spl_object_hash($this);
+        return self::class . ':' . spl_object_hash($this);
     }
 }
