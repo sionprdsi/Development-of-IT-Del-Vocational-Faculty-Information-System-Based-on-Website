@@ -1,6 +1,6 @@
 ## Sistem Informasi Vokasi IT Del Berbasis Website
 
-Selamat datang di Sistem Informasi Vokasi IT Del Berbasis Website! Proyek ini bertujuan untuk menyediakan platform yang komprehensif bagi Fakultas Vokasi IT Del, yang meliputi program studi D4 Teknologi Rekayasa Perangkat Lunak serta D3 Teknologi Informasi dan Teknologi Komputer.
+Sistem Informasi Vokasi IT Del Berbasis Website! Proyek ini bertujuan untuk menyediakan platform yang komprehensif bagi Fakultas Vokasi IT Del, yang meliputi program studi D4 Teknologi Rekayasa Perangkat Lunak serta D3 Teknologi Informasi dan Teknologi Komputer.
 
 ![halaman berita](https://github.com/sionprdsi/FakultasVokasiITDel/assets/115578048/86946b51-90fb-4554-9f72-5c24d472edd6)
 
@@ -46,7 +46,7 @@ Proyek ini mengikuti pendekatan iteratif dengan tahap-tahap yang meliputi:
 ### Kontribusi dan Kontak
 
 Kami sangat terbuka untuk kontribusi dan masukan dari komunitas. Untuk informasi lebih lanjut atau pertanyaan, silakan hubungi kami melalui [spardosi12@gmail.com](mailto:spardosi12@gmail.com).
-*hub : 082278900178 - sion 
+*hub :spardosi12@gmai.com - sion 
 
 *Dibuat dengan Laravel 10*
 
