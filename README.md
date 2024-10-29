@@ -46,7 +46,7 @@ Proyek ini mengikuti pendekatan iteratif dengan tahap-tahap yang meliputi:
 ### Kontribusi dan Kontak
 
 Kami sangat terbuka untuk kontribusi dan masukan dari komunitas. Untuk informasi lebih lanjut atau pertanyaan, silakan hubungi kami melalui [spardosi12@gmail.com](mailto:spardosi12@gmail.com).
-*hub : - sion 
+*hub : - sionp.
 
 *Dibuat dengan Laravel 10*
 
