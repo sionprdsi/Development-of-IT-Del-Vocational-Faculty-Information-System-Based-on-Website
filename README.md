@@ -1,5 +1,34 @@
-## Sistem Informasi Vokasi IT Del Berbasis Website
+## IT Del Vocational Information System - Web-Based
 
+The IT Del Vocational Information System! This project aims to provide a comprehensive platform for the Vocational Faculty of IT Del, covering the D4 Software Engineering and D3 Information Technology and Computer Technology study programs.
+
+![News Page](https://github.com/sionprdsi/FakultasVokasiITDel/assets/115578048/86946b51-90fb-4554-9f72-5c24d472edd6)
+
+### Project Objectives
+
+This project aims to:
+- Provide an integrated platform for accessing all information related to the Vocational Faculty of IT Del.
+- Improve efficiency in managing information related to study programs, news, achievements, vision and mission, and faculty portfolios.
+- Enhance the branding of IT Del's Vocational Faculty through improved accessibility and quality of information.
+
+### Key Features
+
+1. **Homepage**: The main page featuring images, logos, profile videos, and other elements that provide an overview and intuitive navigation to other sections of the site.
+   
+2. **Profile**: Displays the history, vision, mission, and goals of the Vocational Faculty of IT Del, including information on organizational structure and achievements.
+
+3. **Civitas**: Presents detailed profiles of faculty members, students, and alumni. This information includes educational background, achievements, publications, and work experience.
+
+4. **Academics**: Details the study programs, including curriculum, academic calendar, and information about available scholarships.
+
+5. **Vocational Information**: Provides the latest news, announcements, and agendas for academic and non-academic events at IT Del.
+
+### Admin Features
+
+- **Authentication**: Login system for admins to securely manage site content.
+- **CRUD Operations**: Enables admins to create, read, update, and delete information across various sections of the site.
+
+### Technical Implementation
 ### <summary><strong>Tools:</strong></summary>
 <p>
     <img src="https://img.shields.io/badge/Framework-Laravel-red?logo=laravel&logoColor=white" />
@@ -10,53 +39,24 @@
     <img src="https://img.shields.io/badge/Frontend-TypeScript-blue?logo=typescript&logoColor=white" />
 </p>
 
-Sistem Informasi Vokasi IT Del Berbasis Website! Proyek ini bertujuan untuk menyediakan platform yang komprehensif bagi Fakultas Vokasi IT Del, yang meliputi program studi D4 Teknologi Rekayasa Perangkat Lunak serta D3 Teknologi Informasi dan Teknologi Komputer.
+This project is developed using the following technologies:
+- **Framework**: Laravel is used for the backend, providing a robust and scalable foundation.
+- **Frontend**: HTML, CSS, and JavaScript, with Bootstrap for responsive design and modern aesthetics.
+- **Code Optimization**: TypeScript is used for better code management and faster performance.
 
-![halaman berita](https://github.com/sionprdsi/FakultasVokasiITDel/assets/115578048/86946b51-90fb-4554-9f72-5c24d472edd6)
+### Development Approach
 
-### Tujuan Proyek
+This project follows an iterative approach with stages that include:
+- Requirement exploration using elicitation techniques such as interviews and observations.
+- Iterative design and development using Agile methodology.
+- Thorough testing to ensure implementation quality.
+- Preparation of reports and presentations for the final submission to the client.
 
-Proyek ini bertujuan untuk:
-- Menyediakan wadah terpadu untuk mengakses semua informasi terkait Fakultas Vokasi IT Del.
-- Meningkatkan efisiensi dalam pengelolaan informasi terkait program studi, berita, prestasi, visi misi, dan portofolio staf pengajar.
-- Meningkatkan branding Fakultas Vokasi IT Del melalui peningkatan aksesibilitas dan kualitas informasi.
+### Contributions and Contact
 
-### Fitur Utama
+We are open to contributions and feedback from the community. For more information or inquiries, feel free to contact us at [spardosi12@gmail.com](mailto:spardosi12@gmail.com).
+*Hub: - sionp.*
 
-1. **Beranda**: Halaman utama seperti gambar, logo, video profil dan lain lain yang memberikan gambaran menyeluruh dan navigasi intuitif ke bagian-bagian lain dari situs.
-   
-2. **Profil**: Menyajikan sejarah, visi misi, dan tujuan dari Fakultas Vokasi IT Del. Termasuk juga informasi tentang struktur organisasi dan prestasi.
+*Created with Laravel 10*
 
-3. **Civitas**: Menampilkan profil lengkap dosen, mahasiswa, dan alumni. Informasi ini mencakup pendidikan, prestasi, publikasi, dan pengalaman kerja.
-
-4. **Akademik**: Detail program studi, termasuk kurikulum, kalender akademik, dan informasi tentang beasiswa yang tersedia.
-
-5. **Info Vokasi**: Menyajikan berita terbaru, pengumuman, dan agenda kegiatan akademik dan non-akademik di IT Del.
-
-### Fitur Admin
-
-- **Autentikasi**: Sistem login untuk admin untuk mengelola konten situs dengan aman.
-- **CRUD Operations**: Memungkinkan admin untuk menambah, mengedit, dan menghapus informasi di berbagai bagian situs.
-
-### Implementasi Teknis
-
-Proyek ini dikembangkan menggunakan teknologi sebagai berikut:
-- **Framework**: Menggunakan Laravel untuk backend yang kuat dan skalabel.
-- **Frontend**: Menggunakan HTML, CSS, dan JavaScript, dengan Bootstrap untuk desain responsif dan estetika modern.
-- **Optimalisasi Kode**: Penggunaan TypeScript untuk manajemen kode yang lebih baik dan performa yang lebih cepat.
-
-### Pendekatan Pengembangan
-
-Proyek ini mengikuti pendekatan iteratif dengan tahap-tahap yang meliputi:
-- Eksplorasi kebutuhan dengan teknik elicitation seperti wawancara dan observasi.
-- Desain iteratif dan pengembangan menggunakan metodologi agile.
-- Pengujian menyeluruh untuk memastikan kualitas implementasi.
-- Persiapan laporan dan presentasi untuk penyerahan hasil kepada klien.
-
-### Kontribusi dan Kontak
-
-Kami sangat terbuka untuk kontribusi dan masukan dari komunitas. Untuk informasi lebih lanjut atau pertanyaan, silakan hubungi kami melalui [spardosi12@gmail.com](mailto:spardosi12@gmail.com).
-*hub : - sionp.
-
-*Dibuat dengan Laravel 10*
 
