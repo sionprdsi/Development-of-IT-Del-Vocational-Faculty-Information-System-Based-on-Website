@@ -1,5 +1,15 @@
 ## Sistem Informasi Vokasi IT Del Berbasis Website
 
+### <summary><strong>Tools:</strong></summary>
+<p>
+    <img src="https://img.shields.io/badge/Framework-Laravel-red?logo=laravel&logoColor=white" />
+    <img src="https://img.shields.io/badge/Frontend-HTML5-yellow?logo=html5&logoColor=white" />
+    <img src="https://img.shields.io/badge/Frontend-CSS3-blue?logo=css3&logoColor=white" />
+    <img src="https://img.shields.io/badge/Frontend-JavaScript-yellow?logo=javascript&logoColor=white" />
+    <img src="https://img.shields.io/badge/Frontend-Bootstrap-563d7c?logo=bootstrap&logoColor=white" />
+    <img src="https://img.shields.io/badge/Frontend-TypeScript-blue?logo=typescript&logoColor=white" />
+</p>
+
 Sistem Informasi Vokasi IT Del Berbasis Website! Proyek ini bertujuan untuk menyediakan platform yang komprehensif bagi Fakultas Vokasi IT Del, yang meliputi program studi D4 Teknologi Rekayasa Perangkat Lunak serta D3 Teknologi Informasi dan Teknologi Komputer.
 
 ![halaman berita](https://github.com/sionprdsi/FakultasVokasiITDel/assets/115578048/86946b51-90fb-4554-9f72-5c24d472edd6)
