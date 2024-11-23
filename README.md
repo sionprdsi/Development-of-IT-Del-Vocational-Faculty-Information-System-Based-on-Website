@@ -31,7 +31,8 @@ This project aims to:
 ### Technical Implementation
 ### <summary><strong>Tools:</strong></summary>
 <p>
-    <img src="https://img.shields.io/badge/Backend-Framework-Laravel-red?logo=laravel&logoColor=white" />
+    <img src="https://img.shields.io/badge/Framework-Laravel-red?logo=laravel&logoColor=white" />
+    <img src="https://img.shields.io/badge/Code-PHP-blue?&logo=php" />
     <img src="https://img.shields.io/badge/Frontend-HTML5-yellow?logo=html5&logoColor=white" />
     <img src="https://img.shields.io/badge/Frontend-CSS3-blue?logo=css3&logoColor=white" />
     <img src="https://img.shields.io/badge/Frontend-JavaScript-yellow?logo=javascript&logoColor=white" />
