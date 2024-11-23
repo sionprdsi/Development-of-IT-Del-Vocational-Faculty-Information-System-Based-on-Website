@@ -31,18 +31,21 @@ This project aims to:
 ### Technical Implementation
 ### <summary><strong>Tools:</strong></summary>
 <p>
-    <img src="https://img.shields.io/badge/Framework-Laravel-red?logo=laravel&logoColor=white" />
+    <img src="https://img.shields.io/badge/Backend-Framework-Laravel-red?logo=laravel&logoColor=white" />
     <img src="https://img.shields.io/badge/Frontend-HTML5-yellow?logo=html5&logoColor=white" />
     <img src="https://img.shields.io/badge/Frontend-CSS3-blue?logo=css3&logoColor=white" />
     <img src="https://img.shields.io/badge/Frontend-JavaScript-yellow?logo=javascript&logoColor=white" />
     <img src="https://img.shields.io/badge/Frontend-Bootstrap-563d7c?logo=bootstrap&logoColor=white" />
     <img src="https://img.shields.io/badge/Frontend-TypeScript-blue?logo=typescript&logoColor=white" />
+    <img src="https://img.shields.io/badge/Backend-Node.js-green?logo=node.js&logoColor=white" />
 </p>
 
 This project is developed using the following technologies:
-- **Framework**: Laravel is used for the backend, providing a robust and scalable foundation.
+
+- **Backend Framework**: Laravel is used for the backend, providing a robust and scalable foundation for handling server-side logic and database management.
 - **Frontend**: HTML, CSS, and JavaScript, with Bootstrap for responsive design and modern aesthetics.
 - **Code Optimization**: TypeScript is used for better code management and faster performance.
+- **JavaScript and Node.js**: JavaScript is utilized for dynamic client-side functionality, while Node.js and npm are used to manage dependencies, streamline the development workflow, and optimize server-side scripting.
 
 ### Development Approach
 
@@ -52,10 +55,12 @@ This project follows an iterative approach with stages that include:
 - Thorough testing to ensure implementation quality.
 - Preparation of reports and presentations for the final submission to the client.
 
-### Contributions and Contact
+## Contribution & Feedback:
+We are very open to contributions and feedback from the community. For more information or any questions, feel free to contact us via [spardosi12@gmail.com](mailto:spardosi12@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/sion-pardosi-961607254/).
 
-We are open to contributions and feedback from the community. For more information or inquiries, feel free to contact us at [spardosi12@gmail.com](mailto:spardosi12@gmail.com).
-*Hub: - sionp.*
+## License
+
+This project is licensed under the [MIT License](LICENSE).
 
 *Created with Laravel 10*
 
