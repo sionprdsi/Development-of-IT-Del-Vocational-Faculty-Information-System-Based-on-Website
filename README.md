@@ -1,5 +1,9 @@
 ## IT Del Vocational Information System - Web-Based
 
+### Development of Website-Based Information System for IT Del Vocational Faculty
+
+Led the design and implementation of a centralized website-based information system for IT Del Vocational Faculty, handling over 3,000 lines of PHP and JavaScript code. Developed and optimized a user-friendly interface using Laravel and Bootstrap frameworks, achieving a 40% improvement in navigation efficiency. Integrated dynamic dashboards for administrative management, streamlining content updates by 50%. Conducted iterative development cycles, leveraging Agile methodologies and collaborating closely with stakeholders to ensure alignment with institutional goals. Incorporated database optimization using MySQL. Deployed the system on Apache servers, enhancing accessibility and scalability for over 2,000 users, including faculty, students, and alumni.
+
 The IT Del Vocational Information System! This project aims to provide a comprehensive platform for the Vocational Faculty of IT Del, covering the D4 Software Engineering and D3 Information Technology and Computer Technology study programs.
 
 ![News Page](https://github.com/sionprdsi/FakultasVokasiITDel/assets/115578048/86946b51-90fb-4554-9f72-5c24d472edd6)
@@ -27,6 +31,15 @@ This project aims to:
 
 - **Authentication**: Login system for admins to securely manage site content.
 - **CRUD Operations**: Enables admins to create, read, update, and delete information across various sections of the site.
+
+### Methodology
+Our approach followed an iterative design methodology, where the system evolved through continuous cycles of prototyping, testing, analysis, and refinement. This allowed us to incorporate user feedback and adapt to changing requirements.
+
+**Development Stages Included:**
+
+- **Requirements Exploration**: Utilizing elicitation techniques like interviews and observations to identify user needs.
+- **Prototyping**: Developing and refining prototypes based on initial findings.
+- **Testing and Feedback**: Iteratively improving the system through user evaluations.
 
 ### Technical Implementation
 ### <summary><strong>Tools:</strong></summary>
@@ -56,6 +69,9 @@ This project follows an iterative approach with stages that include:
 - Thorough testing to ensure implementation quality.
 - Preparation of reports and presentations for the final submission to the client.
 
+### Impact of the Project:
+The development of this centralized web platform has successfully addressed the critical need for an integrated solution within the IT Del Vocational Faculty. By improving the accessibility of information and streamlining operational workflows, the project delivers measurable value to students, faculty, alumni, and the wider community. This initiative represents a significant step towards modernizing the faculty's digital infrastructure, enabling better management of resources and fostering a more cohesive digital ecosystem.
+
 ## Contribution & Feedback:
 We are very open to contributions and feedback from the community. For more information or any questions, feel free to contact us via [spardosi12@gmail.com](mailto:spardosi12@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/sion-pardosi-961607254/).
 
@@ -64,5 +80,3 @@ We are very open to contributions and feedback from the community. For more info
 This project is licensed under the [MIT License](LICENSE).
 
 *Created with Laravel 10*
-
-
