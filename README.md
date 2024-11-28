@@ -79,4 +79,4 @@ We are very open to contributions and feedback from the community. For more info
 
 This project is licensed under the [MIT License](LICENSE).
 
-*Created with Laravel*
+*Created with Laravel 10*
