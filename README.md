@@ -1,8 +1,7 @@
 ## IT Del Vocational Information System - Web-Based
 
 ### Development of Website-Based Information System for IT Del Vocational Faculty
-#### Link:
-[https://vokasi.del.ac.id/](https://vokasi.del.ac.id/)
+#### Link: [https://vokasi.del.ac.id/](https://vokasi.del.ac.id/)
 
 Led the design and implementation of a centralized website-based information system for IT Del Vocational Faculty, handling over 3,000 lines of PHP and JavaScript code. Developed and optimized a user-friendly interface using Laravel and Bootstrap frameworks, achieving a 40% improvement in navigation efficiency. Integrated dynamic dashboards for administrative management, streamlining content updates by 50%. Conducted iterative development cycles, leveraging Agile methodologies and collaborating closely with stakeholders to ensure alignment with institutional goals. Incorporated database optimization using MySQL. Deployed the system on Apache servers, enhancing accessibility and scalability for over 2,000 users, including faculty, students, and alumni.
 
